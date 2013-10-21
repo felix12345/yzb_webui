@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<!--iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览-->
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<!--iphone的私有标签，它指定的iphone中safari顶端的状态条的样式-->
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<!--告诉设备忽略将页面中的数字识别为电话号码-->
+<meta content="telephone=no" name="format-detection" />
+<!--去除Android平台中对邮箱地址的识别-->
+<meta content="email=no" name="format-detection" />
+<title>列表页</title>
+<link type="text/css" rel="Stylesheet" href="plug/SyntaxHighlighter/shCore.css"/>
+<link type="text/css" rel="Stylesheet" href="plug/SyntaxHighlighter/shThemeDefault.css"/>
+<link href="css/yzb_style.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/yzb_ui.js" type="text/javascript"></script>
+<script src="plug/SyntaxHighlighter/shCore.js" type="text/javascript"></script>
+<script type="text/javascript" src="plug/SyntaxHighlighter/shBrushCss.js"></script>
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+<style type="text/css">
+body{
+	background:#eee;
+}
+/* 二次定义列表中的字段宽度和行高，用于调整出合适的列表样式。 */
+.yzb_list .righticon img{
+	width:10px;
+	height:12px;
+}
+.yzb_list.list1 .left1 {
+	width: 95%;
+	line-height: 44px;
+}
+.yzb_list.list2 .left1 {
+	width: 80%;
+	line-height: 44px;
+}
+.yzb_list.list2 .righticon{
+	margin:14px 10px 0 0;
+}
+.yzb_list.list3 .left1 {
+	width: 80%;
+	line-height: 44px;
+}
+.yzb_list.list3 .left2 {
+	width: 80%;
+	margin-top:-10px;
+	margin-bottom:10px;
+}
+.yzb_list.list3 .righticon img{
+	width:10px;
+	height:12px;
+}
+.yzb_list.list3 .righticon{
+	margin:24px 10px 0 0;
+}
+.yzb_list.list4 .left1 {
+	width: 60%;
+	line-height: 44px;
+}
+.yzb_list.list4 .left2 {
+	width:60%;
+	margin-top:-5px;
+	margin-bottom:10px;
+}
+.yzb_list.list4 .righticon img{
+	width:10px;
+	height:12px;
+}
+.yzb_list.list4 .righticon{
+	margin:24px 10px 0 0;
+}
+.yzb_list.list4 .leftimg img{
+	width:50px;
+	height:50px;
+}
+.yzb_list.list4 .leftimg{
+	float: left;
+	margin:10px 0 10px 10px;
+}
+</style>
+</head>
+
+<body>
+<div class="yzb_titlebar">
+	<span class="titlebar_left">
+		<a class="yzb_btn style_img" href="index.htm"><img src="images/icon/titleicon_back.png"></a>
+	</span>
+	<h1 class="title">列表样式</h1>
+</div>
+<h2>单行列表（无链接）</h2>
+<p>无论是单行还是多行，文字的偏移和大小都需单独设置。<br>例如下面示例中的list1就是针对于这一个列表的单独样式。用它来定义里面文字和图片的大小和偏移。</p>
+<pre class="brush:css">
+	.yzb_list.list1 .left1 {
+		width: 95%;
+		line-height: 44px;
+	}
+</pre>
+<p>完整的代码如下</p>
+<pre class="brush:css">
+	<ul class="yzb_list list1">
+		<li><span class="left1">单行文字,单行文字,单行文字,单行文字,单行文字,单行文字,单行文字,单行文字</span></li>
+		<li><span class="left1">单行文字,单行文字,单行文字,单行文字</span></li>
+		<li><span class="left1">单行文字,单行文字,单行文字,单行文字</span></li>
+	</ul>
+</pre>
+<p>再将部分的样式控制交给jquery，这样省略部分属性标签，外层的&#8249;ul class="yzb_list list1"&#8250;不变，里面简写成</p>
+<pre class="brush:css">
+		<li><span class="left1">单行文字,单行文字,单行文字,单行文字,单行文字,单行文字,单行文字,单行文字</span></li>
+		<li><span class="left1">单行文字,单行文字,单行文字,单行文字</span></li>
+		<li><span class="left1">单行文字,单行文字,单行文字,单行文字</span></li>
+</pre>
+<ul class="yzb_list list1">
+	<li><span class="left1">单行文字,单行文字,单行文字,单行文字,单行文字,单行文字,单行文字,单行文字</span></li>
+	<li><span class="left1">单行文字,单行文字,单行文字,单行文字</span></li>
+	<li><span class="left1">单行文字,单行文字,单行文字,单行文字</span></li>
+</ul>
+<h2>单行列表</h2>
+<pre class="brush:css">
+	.yzb_list.list2 .left1 {
+		width: 80%;
+		line-height: 44px;
+	}
+	.yzb_list.list2 .righticon{
+		margin:14px 10px 0 0;
+	}
+	.yzb_list .righticon img{
+		width:10px;
+		height:12px;
+	}
+</pre>
+<p>外层的 &#8249;ul class="yzb_list list1"&#8250;不变，ul里写成</p>
+<pre class="brush:css">
+		<li><a class="list" href="#"><span class="left1">单行文字有链接，单行文字有链接，单行文字有链接，单行文字有链接，单行文字有链接，</span><span class="righticon"><img src="images/icon/check.png"></span></a></li>
+		<li><a class="list" href="#"><span class="left1">单行文字有链接，单行文字有链接，</span><span class="righticon"><img src="images/icon/check.png"></span></a></li>
+		<li><a class="list" href="#"><span class="left1">单行文字有链接，单行文字有链接，</span><span class="righticon"><img src="images/icon/check.png"></span></a></li>
+</pre>
+<ul class="yzb_list list2">
+	<li><a class="list" href="#"><span class="left1">单行文字有链接，单行文字有链接，单行文字有链接，单行文字有链接，单行文字有链接，</span><span class="righticon"><img src="images/icon/check.png"></span></a></li>
+	<li><a class="list" href="#"><span class="left1">单行文字有链接，单行文字有链接，</span><span class="righticon"><img src="images/icon/check.png"></span></a></li>
+	<li><a class="list" href="#"><span class="left1">单行文字有链接，单行文字有链接，</span><span class="righticon"><img src="images/icon/check.png"></span></a></li>
+</ul>
+<h2>多行列表</h2>
+<pre class="brush:css">
+	.yzb_list.list3 .left1 {
+		width: 80%;
+		line-height: 44px;
+	}
+	.yzb_list.list3 .left2 {
+		width: 80%;
+		margin-top:-10px;
+		margin-bottom:10px;
+	}
+	.yzb_list.list3 .righticon img{
+		width:10px;
+		height:12px;
+	}
+	.yzb_list.list3 .righticon{
+		margin:24px 10px 0 0;
+	}
+	.yzb_list .righticon img{
+		width:10px;
+		height:12px;
+	}
+</pre>
+<p>外层的 &#8249;ul class="yzb_list list1"&#8250;不变，ul里写成</p>
+<pre class="brush:css">
+		<li><a class="list" href="#"><span class="left1">双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span><span class="righticon"><img src="images/icon/check.png"></span><span class="left2">双行文字有链接2，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span></a></li>
+		<li><a class="list" href="#"><span class="left1">双行文字有链接，双行文字有链接，</span><span class="righticon"><img src="images/icon/check.png"></span><span class="left2">双行文字有链接2，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span></a></li>
+		<li><a class="list" href="#"><span class="left1">双行文字有链接，双行文字有链接，</span><span class="righticon"><img src="images/icon/check.png"></span><span class="left2">双行文字有链接2，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span></a></li>
+</pre>
+<ul class="yzb_list list3">
+	<li><a class="list" href="#"><span class="left1">双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span><span class="righticon"><img src="images/icon/check.png"></span><span class="left2">双行文字有链接2，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span></a></li>
+	<li><a class="list" href="#"><span class="left1">双行文字有链接，双行文字有链接，</span><span class="righticon"><img src="images/icon/check.png"></span><span class="left2">双行文字有链接2，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span></a></li>
+	<li><a class="list" href="#"><span class="left1">双行文字有链接，双行文字有链接，</span><span class="righticon"><img src="images/icon/check.png"></span><span class="left2">双行文字有链接2，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span></a></li>
+</ul>
+<h2>多行带图片的列表</h2>
+<pre class="brush:css">
+	.yzb_list.list4 .left1 {
+		width: 60%;
+		line-height: 44px;
+	}
+	.yzb_list.list4 .left2 {
+		width:60%;
+		margin-top:-5px;
+		margin-bottom:10px;
+	}
+	.yzb_list.list4 .righticon img{
+		width:10px;
+		height:12px;
+	}
+	.yzb_list.list4 .righticon{
+		margin:24px 10px 0 0;
+	}
+	.yzb_list.list4 .leftimg img{
+		width:50px;
+		height:50px;
+	}
+	.yzb_list.list4 .leftimg{
+		float: left;
+		margin:10px 0 10px 10px;
+	}
+</pre>
+<p>外层的 &#8249;ul class="yzb_list list1"&#8250;不变，ul里写成</p>
+<pre class="brush:css">
+	<li>
+		<a class="list" href="#">
+			<span class=leftimg><img src="images/big.jpg"></span>
+			<span class="left1">双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span>
+			<span class="righticon"><img src="images/icon/check.png"></span>
+			<span class="left2">双行文字有链接2，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span>
+		</a>
+	</li>
+	<li>
+		<a class="list" href="#">
+			<span class=leftimg><img src="images/big.jpg"></span>
+			<span class="left1">双行文字有链接，双行文字有链接，</span>
+			<span class="righticon"><img src="images/icon/check.png"></span>
+			<span class="left2">双行文字有链接2，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span>
+		</a>
+	</li>
+	<li>
+		<a class="list" href="#">
+			<span class=leftimg><img src="images/big.jpg"></span>
+			<span class="left1">双行文字有链接，双行文字有链接，</span>
+			<span class="righticon"><img src="images/icon/check.png"></span>
+			<span class="left2">双行文字有链接2，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span>
+		</a>
+	</li>
+</pre>
+<ul class="yzb_list list4">
+	<li>
+		<a class="list" href="#">
+			<span class=leftimg><img src="images/big.jpg"></span>
+			<span class="left1">双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span>
+			<span class="righticon"><img src="images/icon/check.png"></span>
+			<span class="left2">双行文字有链接2，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span>
+		</a>
+	</li>
+	<li>
+		<a class="list" href="#">
+			<span class=leftimg><img src="images/big.jpg"></span>
+			<span class="left1">双行文字有链接，双行文字有链接，</span>
+			<span class="righticon"><img src="images/icon/check.png"></span>
+			<span class="left2">双行文字有链接2，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span>
+		</a>
+	</li>
+	<li>
+		<a class="list" href="#">
+			<span class=leftimg><img src="images/big.jpg"></span>
+			<span class="left1">双行文字有链接，双行文字有链接，</span>
+			<span class="righticon"><img src="images/icon/check.png"></span>
+			<span class="left2">双行文字有链接2，双行文字有链接，双行文字有链接，双行文字有链接，双行文字有链接，</span>
+		</a>
+	</li>
+</ul>
+</body>
+</html>

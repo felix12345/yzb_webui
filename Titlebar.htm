@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> 
+<!--iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览-->
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<!--iphone的私有标签，它指定的iphone中safari顶端的状态条的样式-->
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<!--告诉设备忽略将页面中的数字识别为电话号码-->
+<meta content="telephone=no" name="format-detection" /> 
+<!--去除Android平台中对邮箱地址的识别-->
+<meta content="email=no" name="format-detection" /> 
+<title>Titlebar</title>
+<link type="text/css" rel="Stylesheet" href="plug/SyntaxHighlighter/shCore.css"/>
+<link type="text/css" rel="Stylesheet" href="plug/SyntaxHighlighter/shThemeDefault.css"/>
+<link href="css/yzb_style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/yzb_ui.js" type="text/javascript"></script>
+<script src="plug/SyntaxHighlighter/shCore.js" type="text/javascript"></script>
+<script type="text/javascript" src="plug/SyntaxHighlighter/shBrushCss.js"></script>
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+<style type="text/css">
+	div.yzb_titlebar{
+		margin:0 0 10px 0;
+	}
+</style>
+</head>
+<body>
+<div class="yzb_titlebar" >
+	<span class="titlebar_left">
+		<a class="yzb_btn style_img" href="index.htm"><img src="images/icon/titleicon_back.png"></a>
+	</span>
+	<h1 class="title">Titlebar</h1>
+</div>
+<h2>普通标题栏</h2>
+<p></p>
+<pre class="brush:css">
+	<div class="yzb_titlebar">
+		<h1 class="title">标题</h1>
+	</div>
+</pre>
+<div class="yzb_titlebar">
+    <h1 class="title">标题</h1>
+</div>
+<p>当标题文字过多时，自动变成点点点</p>
+<pre class="brush:css">
+	<div class="yzb_titlebar">
+		<h1 class="title">标题文字过多12345678901234567890</h1>
+	</div>
+</pre>
+<div class="yzb_titlebar">
+    <h1 class="title">标题文字过多12345678901234567890</h1>
+</div>
+<h2>带有按钮的标题栏</h2>
+<p>在titlebar_left中的button会出现在titlebar的左侧，同样在titlebar_right中的button出现在titlebar的右侧</p>
+<pre class="brush:css">
+	<div class="yzb_titlebar">
+		<span class="titlebar_left">
+			<a class="yzb_btn" href="#">确定</a>
+		</span>
+		<h1 class="title">普通按钮</h1>
+		<span class="titlebar_right">
+			<a class="yzb_btn" href="#">确定</a>
+		</span>
+	</div>
+</pre>
+<div class="yzb_titlebar">
+	<span class="titlebar_left">
+		<a class="yzb_btn" href="#">确定</a>
+	</span>
+    <h1 class="title">普通按钮</h1>
+    <span class="titlebar_right">
+		<a class="yzb_btn" href="#">确定</a>
+	</span>
+</div>
+<p>变换不同的按钮样式，请参考button的用法</p>
+<div class="yzb_titlebar">
+	<span class="titlebar_left">
+		<a class="yzb_btn style_flat" href="#">确定</a>
+	</span>
+    <h1 class="title">扁平按钮</h1>
+    <span class="titlebar_right">
+		<a class="yzb_btn style_flat" href="#">确定</a>
+	</span>
+</div>
+<div class="yzb_titlebar">
+	<span class="titlebar_left">
+		<a class="yzb_btn style_flat color_red" href="#">确定</a>
+	</span>
+    <h1 class="title">彩色按钮</h1>
+    <span class="titlebar_right">
+		<a class="yzb_btn style_flat color_green" href="#">确定</a>
+	</span>
+</div>
+<div class="yzb_titlebar">
+	<span class="titlebar_left">
+		<a class="yzb_btn style_img" href="#"><img src="images/icon/titleicon_config.png"></a>
+	</span>
+    <h1 class="title">图片按钮1234567890</h1>
+    <span class="titlebar_right">
+		<a class="yzb_btn style_img" href="#"><img src="images/icon/titleicon_config.png"></a>
+	</span>
+</div>
+<p>标题栏左右两侧最多可各放置两个图标按钮,引用样式.yzb_titlebar的同时，再引用.style_2btn</p>
+<pre class="brush:css">
+	<div class="yzb_titlebar style_2btn">
+		<span class="titlebar_left">
+			<a class="yzb_btn style_img" href="#"><img src="images/icon/titleicon_config.png"></a>
+		</span>
+		<span class="titlebar_left">
+			<a class="yzb_btn style_img" href="#"><img src="images/icon/titleicon_config.png"></a>
+		</span>
+		<h1 class="title">双图片按钮</h1>
+		<span class="titlebar_right">
+			<a class="yzb_btn style_img" href="#"><img src="images/icon/titleicon_config.png"></a>
+		</span>
+		<span class="titlebar_right">
+			<a class="yzb_btn style_img" href="#"><img src="images/icon/titleicon_config.png"></a>
+		</span>
+	</div>
+</pre>
+<div class="yzb_titlebar style_2btn">
+	<span class="titlebar_left">
+		<a class="yzb_btn style_img" href="#"><img src="images/icon/titleicon_config.png"></a>
+	</span>
+	<span class="titlebar_left">
+		<a class="yzb_btn style_img" href="#"><img src="images/icon/titleicon_config.png"></a>
+	</span>
+    <h1 class="title">双图片按钮123456</h1>
+    <span class="titlebar_right">
+		<a class="yzb_btn style_img" href="#"><img src="images/icon/titleicon_config.png"></a>
+	</span>
+	<span class="titlebar_right">
+		<a class="yzb_btn style_img" href="#"><img src="images/icon/titleicon_config.png"></a>
+	</span>
+</div>
+</body>
+</html>

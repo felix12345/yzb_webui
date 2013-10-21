@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> 
+<!--iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览-->
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<!--iphone的私有标签，它指定的iphone中safari顶端的状态条的样式-->
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<!--告诉设备忽略将页面中的数字识别为电话号码-->
+<meta content="telephone=no" name="format-detection" /> 
+<!--去除Android平台中对邮箱地址的识别-->
+<meta content="email=no" name="format-detection" /> 
+<title>Button</title>
+<link type="text/css" rel="Stylesheet" href="plug/SyntaxHighlighter/shCore.css"/>
+<link type="text/css" rel="Stylesheet" href="plug/SyntaxHighlighter/shThemeDefault.css"/>
+<link href="css/yzb_style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/yzb_ui.js" type="text/javascript"></script>
+<script src="plug/SyntaxHighlighter/shCore.js" type="text/javascript"></script>
+<script type="text/javascript" src="plug/SyntaxHighlighter/shBrushCss.js"></script>
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+<style type="text/css">
+	ul.index_ul li{
+		width:90%;
+		margin:10px auto;
+	}
+	ul a{
+		margin:10px;
+	}
+</style>
+</head>
+<body>
+<div class="yzb_titlebar" >
+	<span class="titlebar_left">
+		<a class="yzb_btn style_img" href="index.htm"><img src="images/icon/titleicon_back.png"></a>
+	</span>
+	<h1 class="title">Button</h1>
+</div>
+<ul class="index_ul">
+	<li>
+		<h2>正常状态</h2>
+		<p>a标签的button控件是不需要js支持的；基础样式是yzb_btn。使用红色按钮时加入样式color_red；使用绿色按钮时加入样式color_green；使用灰色按钮时加入样式color_gray；</p>
+		<pre class="brush:css">
+			<a class="yzb_btn" href="#">测试</a>
+			<a class="yzb_btn color_red" href="#">测试</a>
+			<a class="yzb_btn color_green" href="#">测试</a>
+			<a class="yzb_btn color_gray" href="#">测试</a>
+		</pre>
+		<a class="yzb_btn" href="#">测试</a>
+		<a class="yzb_btn color_red" href="#">测试</a>
+		<a class="yzb_btn color_green" href="#">测试</a>
+		<a class="yzb_btn color_gray" href="#">测试</a>
+	</li>
+	<li>
+		<h2>大按钮</h2>
+		<p>使用大按钮时加入style_big样式</p>
+		<pre class="brush:css">
+			<a class="yzb_btn style_big" href="#">测试</a>
+			<a class="yzb_btn color_red style_big" href="#">测试</a>
+			<a class="yzb_btn color_green style_big" href="#">测试</a>
+			<a class="yzb_btn color_gray style_big" href="#">测试</a>
+		</pre>
+		<a class="yzb_btn style_big" href="#">测试</a>
+		<a class="yzb_btn color_red style_big" href="#">测试</a>
+		<a class="yzb_btn color_green style_big" href="#">测试</a>
+		<a class="yzb_btn color_gray style_big" href="#">测试</a>
+	</li>
+	<li>
+		<h2>扁平化按钮</h2>
+		<p>使用扁平化按钮风格时加入style_flat样式</p>
+		<pre class="brush:css">
+			<a class="yzb_btn style_flat" href="#">测试</a>
+			<a class="yzb_btn color_red style_flat" href="#">测试</a>
+			<a class="yzb_btn color_green style_flat" href="#">测试</a>
+			<a class="yzb_btn color_gray style_flat" href="#">测试</a>
+		</pre>
+		<a class="yzb_btn style_flat" href="#">测试</a>
+		<a class="yzb_btn color_red style_flat" href="#">测试</a>
+		<a class="yzb_btn color_green style_flat" href="#">测试</a>
+		<a class="yzb_btn color_gray style_flat" href="#">测试</a>
+	</li>
+	<li>
+		<h2>扁平化大按钮</h2>
+		<pre class="brush:css">
+			<a class="yzb_btn style_big style_flat" href="#">测试</a>
+			<a class="yzb_btn color_red style_big style_flat" href="#">测试</a>
+			<a class="yzb_btn color_green style_big style_flat" href="#">测试</a>
+			<a class="yzb_btn color_gray style_big style_flat" href="#">测试</a>
+		</pre>
+		<a class="yzb_btn style_big style_flat" href="#">测试</a>
+		<a class="yzb_btn color_red style_big style_flat" href="#">测试</a>
+		<a class="yzb_btn color_green style_big style_flat" href="#">测试</a>
+		<a class="yzb_btn color_gray style_big style_flat" href="#">测试</a>
+	</li>
+	<li>
+		<h2>IOS6风格的按钮</h2>
+		<p>使用IOS6风格的按钮时加入style_iso6样式</p>
+		<pre class="brush:css">
+			<a class="yzb_btn style_iso6" href="#">测试</a>
+			<a class="yzb_btn color_red style_iso6" href="#">测试</a>
+			<a class="yzb_btn color_green style_iso6" href="#">测试</a>
+			<a class="yzb_btn color_gray style_iso6" href="#">测试</a>
+		</pre>
+		<a class="yzb_btn style_iso6" href="#">测试</a>
+		<a class="yzb_btn color_red style_iso6" href="#">测试</a>
+		<a class="yzb_btn color_green style_iso6" href="#">测试</a>
+		<a class="yzb_btn color_gray style_iso6" href="#">测试</a>
+	</li>
+	<li>
+		<h2>IOS6风格的大按钮</h2>
+		<pre class="brush:css">
+			<a class="yzb_btn style_big style_iso6" href="#">测试</a>
+			<a class="yzb_btn color_red style_big style_iso6" href="#">测试</a>
+			<a class="yzb_btn color_green style_big style_iso6" href="#">测试</a>
+			<a class="yzb_btn color_gray style_big style_iso6" href="#">测试</a>
+		</pre>
+		<a class="yzb_btn style_big style_iso6" href="#">测试</a>
+		<a class="yzb_btn color_red style_big style_iso6" href="#">测试</a>
+		<a class="yzb_btn color_green style_big style_iso6" href="#">测试</a>
+		<a class="yzb_btn color_gray style_big style_iso6" href="#">测试</a>
+	</li>
+	<li>
+		<h2>图标按钮</h2>
+		<p>使用图标按钮时加入style_img样式，并在<img>里面加入图标的src。</p>
+		<pre class="brush:css">
+			<a class="yzb_btn style_img" href="#">
+				<img src="images/icon/titleicon_config.png">
+			</a>
+			<a class="yzb_btn style_img" href="#">
+				<img src="images/icon/titleicon_back.png">
+			</a>
+		</pre>
+		<a class="yzb_btn style_img" href="#">
+			<img src="images/icon/titleicon_config.png">
+		</a>
+		<a class="yzb_btn style_img" href="#">
+			<img src="images/icon/titleicon_back.png">
+		</a>
+	</li>
+</ul>
+</body>
+</html>

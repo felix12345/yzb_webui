@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" > 
+<!--iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览-->
+<meta content="yes" name="apple-mobile-web-app-capable" > 
+<!--iphone的私有标签，它指定的iphone中safari顶端的状态条的样式-->
+<meta content="black" name="apple-mobile-web-app-status-bar-style" > 
+<!--告诉设备忽略将页面中的数字识别为电话号码-->
+<meta content="telephone=no" name="format-detection" > 
+<!--去除Android平台中对邮箱地址的识别-->
+<meta content="email=no" name="format-detection" > 
+<title>Toolbar</title>
+<link type="text/css" rel="Stylesheet" href="plug/SyntaxHighlighter/shCore.css"/>
+<link type="text/css" rel="Stylesheet" href="plug/SyntaxHighlighter/shThemeDefault.css"/>
+<link href="css/yzb_style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/yzb_ui.js" type="text/javascript"></script>
+<script src="plug/SyntaxHighlighter/shCore.js" type="text/javascript"></script>
+<script type="text/javascript" src="plug/SyntaxHighlighter/shBrushCss.js"></script>
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+</head>
+<body>
+<div class="yzb_titlebar" >
+	<span class="titlebar_left">
+		<a class="yzb_btn style_img" href="index.htm"><img src="images/icon/titleicon_back.png"></a>
+	</span>
+	<h1 class="title">Toolbar</h1>
+</div>
+<div style="height:1000px;">
+	<p>1，toolbar始终出现在底部边缘，无论页面是否滚动。<br>
+		2，下方示例中的样式"f4"是一排4个按钮的布局样式，如果一排是3个或5个按钮，则需要修改样子。<br>
+		3，在手机端点击接触时会改变样子，这部分写在yzb_ui.js里，所以使用toolbar时必须要引用yzb_ui.js。<br>
+		4，HTML中只需指定各按钮的图片，点击时的样式的图片不需指定，（请把点击时的样式图片命名成“同名”+“_press”.png，例如，收藏的图标是icon_share.png，那么把它在点击时的图片命名为icon_share_press.png）。<br>
+		5，按钮图片必须是PNG格式的图片。
+	</p>
+	<pre class="brush:css">
+		<div class="yzb_toolbar fn-clear">
+			<div class="f4">
+				<a href="#" class="button">
+					<img src="images/icon/icon_favorite.png">
+					<span>收藏</span>
+				</a>
+			</div>
+			<div class="f4">
+				<a href="#" class="button">
+					<img src="images/icon/icon_route_fromhere.png">
+					<span>从这里出发</span>
+				</a>
+			</div>
+			<div class="f4">
+				<a href="#" class="button">
+					<img src="images/icon/icon_route_tohere.png">
+					<span>到这里去</span>
+				</a>
+			</div>
+			<div class="f4">
+				<a href="#" class="button">
+					<img src="images/icon/icon_share.png">
+					<span>分享</span>
+				</a>
+			</div>
+		</div>
+	</pre>
+</div>
+<div class="yzb_toolbar fn-clear">
+	<div class="f4">
+		<a href="#" class="button">
+			<img src="images/icon/icon_favorite.png">
+			<span>收藏</span>
+		</a>
+	</div>
+	<div class="f4">
+		<a href="#" class="button">
+			<img src="images/icon/icon_route_fromhere.png">
+			<span>从这里出发</span>
+		</a>
+	</div>
+	<div class="f4">
+		<a href="#" class="button">
+			<img src="images/icon/icon_route_tohere.png">
+			<span>到这里去</span>
+		</a>
+	</div>
+	<div class="f4">
+		<a href="#" class="button">
+			<img src="images/icon/icon_share.png">
+			<span>分享</span>
+		</a>
+	</div>
+</div>
+</body>
+</html>

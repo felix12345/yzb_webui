@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> 
+<!--iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览-->
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<!--iphone的私有标签，它指定的iphone中safari顶端的状态条的样式-->
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<!--告诉设备忽略将页面中的数字识别为电话号码-->
+<meta content="telephone=no" name="format-detection" /> 
+<!--去除Android平台中对邮箱地址的识别-->
+<meta content="email=no" name="format-detection" /> 
+<title>自适应大小的背影图片</title>
+<link type="text/css" rel="Stylesheet" href="plug/SyntaxHighlighter/shCore.css"/>
+<link type="text/css" rel="Stylesheet" href="plug/SyntaxHighlighter/shThemeDefault.css"/>
+<link href="css/yzb_style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.min.js"></script>
+<script src="js/yzb_ui.js"></script>
+<script src="plug/SyntaxHighlighter/shCore.js"></script>
+<script src="plug/SyntaxHighlighter/shBrushCss.js"></script>
+<script type="text/javascript">
+     SyntaxHighlighter.all();
+</script>
+<style  type="text/css">
+html, body{
+	height:100%;
+}
+p{
+	color: #fff;
+}
+.testdiv{
+	background-image:url(images/big.jpg);
+}
+</style>
+</head>
+<body class="yzb_bgimgfill  testdiv">
+<div class="yzb_titlebar" >
+	<span class="titlebar_left">
+		<a class="yzb_btn style_img" href="index.htm"><img src="images/icon/titleicon_back.png"></a>
+	</span>
+	<h1 class="title">自适应大小的背景图片</h1>
+</div>
+<p >对要添加背景的容器添加样式.yzb_bgimgfill 并另加样式指定图片路径。</p>
+<pre class="brush:css">
+	<style  type="text/css">
+	.testdiv{
+		background-image:url(images/big.jpg);
+	}
+	</style>
+	<div class="yzb_bgimgfill  testdiv"></div>
+</pre>
+</body>
+</html>

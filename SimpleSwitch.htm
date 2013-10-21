@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> 
+<!--iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览-->
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<!--iphone的私有标签，它指定的iphone中safari顶端的状态条的样式-->
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<!--告诉设备忽略将页面中的数字识别为电话号码-->
+<meta content="telephone=no" name="format-detection" /> 
+<!--去除Android平台中对邮箱地址的识别-->
+<meta content="email=no" name="format-detection" /> 
+<title>Simple Switch</title>
+<link type="text/css" rel="Stylesheet" href="plug/SyntaxHighlighter/shCore.css"/>
+<link type="text/css" rel="Stylesheet" href="plug/SyntaxHighlighter/shThemeDefault.css"/>
+<link href="css/yzb_style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/yzb_ui.js" type="text/javascript"></script>
+<script src="plug/SyntaxHighlighter/shCore.js" type="text/javascript"></script>
+<script type="text/javascript" src="plug/SyntaxHighlighter/shBrushCss.js"></script>
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+<style type="text/css">
+ul.index_ul li{
+	width:90%;
+	margin:10px auto;
+}
+</style>
+</head>
+<body>
+<div class="yzb_titlebar" >
+	<span class="titlebar_left">
+		<a class="yzb_btn style_img" href="index.htm"><img src="images/icon/titleicon_back.png"></a>
+	</span>
+	<h1 class="title">Simple Switch</h1>
+</div>
+<ul class="index_ul">
+	<li>
+		<h2>关闭状态</h2>
+		<p>注意本页面中显示代码时，会把input标签的属性checked显示成checked=''，这是个显示错误。应该是写成checked即可,或者是写成完整的checked='checked'。</p>
+		<pre class="brush:css">
+			<label class="yzb_switch">
+				<input type="checkbox" class="switch_input">
+				<span class="switch_label" data-on="On" data-off="Off"></span>
+				<span class="switch_handle"></span>
+			</label>
+		</pre>
+		<label class="yzb_switch">
+			<input type="checkbox" class="switch_input">
+			<span class="switch_label" data-on="On" data-off="Off"></span>
+			<span class="switch_handle"></span>
+		</label>
+	</li>
+	<li>
+		<h2>开启状态</h2>
+		<p>开启状态是在input标签中加入属性checked。（注意因该页代码高亮控件的显示问题，本页显示成checked=''，这是个显示错误。应该是写成checked即可,或者是写成完整的checked='checked'）。</p>
+		<pre class="brush:css">
+			<label class="yzb_switch">
+				<input type="checkbox" class="switch_input"  checked>
+				<span class="switch_label" data-on="On" data-off="Off"></span>
+				<span class="switch_handle"></span>
+			</label>
+		</pre>
+		<label class="yzb_switch">
+			<input type="checkbox" class="switch_input" checked>
+			<span class="switch_label" data-on="On" data-off="Off"></span>
+			<span class="switch_handle"></span>
+		</label>
+	</li>
+	<li>
+		<h2>绿色版</h2>
+		<pre class="brush:css">
+			<label class="yzb_switch color_green">
+				<input type="checkbox" class="switch_input" checked>
+				<span class="switch_label" data-on="On" data-off="Off"></span>
+				<span class="switch_handle"></span>
+			</label>
+		</pre>
+		<label class="yzb_switch color_green">
+			<input type="checkbox" class="switch_input" checked>
+			<span class="switch_label" data-on="On" data-off="Off"></span>
+			<span class="switch_handle"></span>
+		</label>
+	</li>
+	<li>
+		<h2>按钮上的文字</h2>
+		<p>代码中data-on="On"和data-off="Off"是指定开和关显示的文字</p>
+		<pre class="brush:css">
+			<label class="yzb_switch color_green">
+				<input type="checkbox" class="switch_input" checked>
+				<span class="switch_label" data-on="开" data-off="关"></span>
+				<span class="switch_handle"></span>
+			</label>
+		</pre>
+		<label class="yzb_switch color_green">
+			<input type="checkbox" class="switch_input" checked>
+			<span class="switch_label" data-on="开" data-off="关"></span>
+			<span class="switch_handle"></span>
+		</label>
+	</li>
+	<li>
+		<h2>关闭时是红色</h2>
+		<pre class="brush:css">
+			<label class="yzb_switch color_red">
+				<input type="checkbox" class="switch_input">
+				<span class="switch_label" data-on="On" data-off="Off"></span>
+				<span class="switch_handle"></span>
+			</label>
+		</pre>
+		<label class="yzb_switch color_red">
+			<input type="checkbox" class="switch_input">
+			<span class="switch_label" data-on="On" data-off="Off"></span>
+			<span class="switch_handle"></span>
+		</label>
+		<label class="yzb_switch color_red">
+			<input type="checkbox" class="switch_input" checked>
+			<span class="switch_label" data-on="On" data-off="Off"></span>
+			<span class="switch_handle"></span>
+		</label>
+		<label class="yzb_switch color_red">
+			<input type="checkbox" class="switch_input" checked>
+			<span class="switch_label" data-on="男" data-off="女"></span>
+			<span class="switch_handle"></span>
+		</label>
+	</li>
+	<li>
+		<hr />
+	</li>
+	<li>
+		<h2>关闭状态（方型）</h2>
+		<pre class="brush:css">
+			<label class="yzb_switch  style_square">
+				<input type="checkbox" class="switch_input">
+				<span class="switch_label" data-on="On" data-off="Off"></span>
+				<span class="switch_handle"></span>
+			</label>
+		</pre>
+		<label class="yzb_switch style_square">
+			<input type="checkbox" class="switch_input">
+			<span class="switch_label" data-on="On" data-off="Off"></span>
+			<span class="switch_handle"></span>
+		</label>
+	</li>
+	<li>
+		<h2>开启状态（方型）</h2>
+		<label class="yzb_switch style_square">
+			<input type="checkbox" class="switch_input" checked>
+			<span class="switch_label" data-on="On" data-off="Off"></span>
+			<span class="switch_handle"></span>
+		</label>
+	</li>
+	<li>
+		<h2>绿色版（方型）</h2>
+		<label class="yzb_switch color_green style_square">
+			<input type="checkbox" class="switch_input" checked>
+			<span class="switch_label" data-on="On" data-off="Off"></span>
+			<span class="switch_handle"></span>
+		</label>
+	</li>
+	<li>
+		<h2>按钮上的文字（方型）</h2>
+		<label class="yzb_switch color_green style_square">
+			<input type="checkbox" class="switch_input" checked>
+			<span class="switch_label" data-on="开" data-off="关"></span>
+			<span class="switch_handle"></span>
+		</label>
+	</li>
+	<li>
+		<h2>关闭时是红色（方型）</h2>
+		<label class="yzb_switch color_red style_square">
+			<input type="checkbox" class="switch_input">
+			<span class="switch_label" data-on="On" data-off="Off"></span>
+			<span class="switch_handle"></span>
+		</label>
+		<label class="yzb_switch color_red style_square">
+			<input type="checkbox" class="switch_input" checked>
+			<span class="switch_label" data-on="On" data-off="Off"></span>
+			<span class="switch_handle"></span>
+		</label>
+	</li>
+	
+</ul>
+</body>
+</html>
